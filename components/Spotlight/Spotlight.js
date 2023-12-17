@@ -1,5 +1,11 @@
 import ArtPiecePreview from "../ArtPiecePreview";
 
-export default function Spotlight({ image, artist }) {
-  return <ArtPiecePreview image={image} title="" artist={artist} />;
+function getRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
+
+export default function Spotlight({ data }) {
+  const piece = getRandom(data);
+  return <ArtPiecePreview data={piece}/>
+}
+

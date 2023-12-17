@@ -1,11 +1,18 @@
-import Image from "next/image"
+import Image from "next/image";
 
-export default function ArtPiecePreview({ image, title, artist }) {
- return (
+export default function ArtPiecePreview({ data }) {
+  return (
     <>
-    <Image src={image} width={350} height={200} alt="art piece image"></Image>
-    <div>{title}</div>
-    <div>{artist}</div>
+      <div key={data.slug}>
+        <Image
+          src={data.imageSource}
+          width={350}
+          height={200}
+          alt="art piece image"
+        ></Image>
+        <div>{data.name}</div>
+        <div>{data.artist}</div>
+      </div>
     </>
- )
+  );
 }
