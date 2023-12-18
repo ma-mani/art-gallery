@@ -1,8 +1,15 @@
 import Link from "next/link";
+import styled from "styled-components";
+
+const Nav = styled.nav`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`;
 
 export default function Navigation() {
   return (
-    <nav>
+    <Nav>
       <ul>
         <li>
           <Link href="/">Spotlight</Link>
@@ -11,6 +18,6 @@ export default function Navigation() {
           <Link href="/art-pieces">Art Pieces</Link>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 }
